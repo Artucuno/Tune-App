@@ -1,0 +1,8 @@
+art==5.6
+cryptography==37.0.2
+Pillow==9.2.0
+py_notifier==0.3.2
+pynotifier==0.1
+pypresence==4.2.1
+requests==2.25.1
+youtube_dl==2021.12.17
