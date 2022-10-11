@@ -137,11 +137,12 @@ class App:
             x = requests.get(self.API_ENDPOINT+'version', timeout=timeout)
             #print(x.text)
             #print(x.status_code)
-            if str(x.strip()) == self.version:
+            if str(x.text.strip()) == self.version:
                 return False
             else:
                 return True
-        except:
+        except Exception as e:
+            print(e)
             return None
 
     def _downloadFile(self, url: str, location: str):
