@@ -123,6 +123,8 @@ class App:
         self._cf('data/cache')
         self._cf('data/history')
         self._cf('data/user')
+        if self._checkForUpdate():
+            print('The Tune App has an update! (It is recommended that you update.)\nhttps://github.com/Artucuno/Tune-App')
         try:
             self._downloadFile('http://tune.loona.gg/static/logo.png', 'logo.png')
         except:
@@ -133,8 +135,8 @@ class App:
     def _checkForUpdate(self, timeout: int = 3):
         try:
             x = requests.get(self.API_ENDPOINT+'version', timeout=timeout)
-            print(x.text)
-            print(x.status_code)
+            #print(x.text)
+            #print(x.status_code)
             if str(x.strip()) == self.version:
                 return False
             else:
