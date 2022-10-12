@@ -21,7 +21,7 @@ for root, dirs, files in os.walk(".", topdown=False):
         if name == '__pycache__':
             shutil.rmtree(os.path.join(root, name))
 
-fo = ['avatar.ico', 'avatar.jpg', 'logo.png', 'private_key.pem', 'public_key.pem', 'run.spec', 'auth']
+fo = ['avatar.ico', 'avatar.jpg', 'private_key.pem', 'public_key.pem', 'run.spec', 'auth', 'state', 'keybinds.json']
 for f in fo:
     try:
         os.remove(f)
